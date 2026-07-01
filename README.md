@@ -1,6 +1,19 @@
 # project-navidson
 
+# PROJECT NAVIDSON
 
+```
+┌──────────────────────────────────────────────────────────────────────┐
+│                          PROJECT NAVIDSON                            │
+│                                                                      │
+│  Network Anomaly Visualization for Insider Detection in              │
+│  Secure Organizational Networks                                      │
+│                                                                      │
+│            Behavior is a function of context.                        │
+└──────────────────────────────────────────────────────────────────────┘
+```
+
+Project NAVIDSON is a Python-based behavioral simulation platform...
 > **Behavior is a function of context.**
 
 Project NAVIDSON is a Python-based behavioral simulation platform that explores how organizational context influences the interpretation of human behavior.
