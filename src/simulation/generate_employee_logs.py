@@ -1,16 +1,33 @@
 import random
 from datetime import datetime, timedelta
-from archetypes import ROLE_BASELINES
+from archetypes import ROLE_PROFILES
 
 
 class Employee:
-    def __init__(self, employee_id, role, department):
+    def __init__(
+        self,
+        employee_id,
+        role,
+        department,
+        first_name,
+        last_name,
+        office,
+        years_with_company,
+        assigned_project,
+        security_clearance,
+    ):
         self.employee_id = employee_id
         self.role = role
         self.department = department
+        self.first_name = first_name
+        self.last_name = last_name
+        self.office = office
+        self.years_with_company = years_with_company
+        self.assigned_project = assigned_project
+        self.security_clearance = security_clearance
 
     def login(self, start_time):
-        profile = ROLE_BASELINES[self.role]
+        profile = ROLE_PROFILES[self.role]
 
         baseline = start_time.replace(
             hour=profile["login_hour"],
@@ -26,37 +43,20 @@ class Employee:
 
         return {
             "employee_id": self.employee_id,
+            "name": f"{self.first_name} {self.last_name}",
             "event_type": "login",
             "timestamp": login_time,
             "role": self.role,
             "department": self.department,
-        }
+            "office": self.office,
+            "assigned_project": self.assigned_project,
+            "security_clearance": self.security_clearance,
+         }
 
     def work(self, start_time):
-        profile = ROLE_BASELINES[self.role]
+        profile = ROLE_PROFILES[self.role]
 
-        possible_events = [
-            {
-                "event_type": "file_access",
-                "system": "Electronic Lab Notebook",
-                "file": "DYLAR-X_Experiment_Notes.md",
-            },
-            {
-                "event_type": "file_access",
-                "system": "LIMS",
-                "file": "Sample_Tracking_Record.csv",
-            },
-            {
-                "event_type": "teams_message",
-                "system": "Microsoft Teams",
-                "recipient_department": "Regulatory Affairs",
-            },
-            {
-                "event_type": "file_access",
-                "system": "Research Share",
-                "file": "DYLAR-X_PhaseIII_Preparation.docx",
-            },
-        ]
+        possible_events = profile["possible_events"]
 
         work_events = []
 
@@ -70,10 +70,14 @@ class Employee:
 
             event.update({
                 "employee_id": self.employee_id,
+                "name": f"{self.first_name} {self.last_name}",
                 "timestamp": event_time,
                 "role": self.role,
                 "department": self.department,
-            })
+                "office": self.office,
+                "assigned_project": self.assigned_project,
+                "security_clearance": self.security_clearance,
+})
 
             work_events.append(event)
 
@@ -84,11 +88,15 @@ class Employee:
 
         return {
             "employee_id": self.employee_id,
+            "name": f"{self.first_name} {self.last_name}",
             "event_type": "logout",
             "timestamp": logout_time,
             "role": self.role,
             "department": self.department,
-        }
+            "office": self.office,
+            "assigned_project": self.assigned_project,
+            "security_clearance": self.security_clearance,
+}
 
 
 if __name__ == "__main__":

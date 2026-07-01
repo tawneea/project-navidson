@@ -1,5 +1,37 @@
 from datetime import datetime
+
 from generate_employee_logs import Employee
+from personnel import generate_person
+
+
+def format_event(event):
+    timestamp = event["timestamp"].strftime("%H:%M")
+    employee_id = event["employee_id"]
+    name = event.get("name", "")
+    event_type = event["event_type"].upper()
+    system = event.get("system", "")
+
+    detail = (
+        event.get("file")
+        or event.get("document")
+        or event.get("record")
+        or event.get("action")
+        or event.get("alert")
+        or event.get("status")
+        or event.get("instrument")
+        or event.get("device")
+        or event.get("recipient_department")
+        or ""
+    )
+
+    return (
+        f"{timestamp}  "
+        f"{employee_id:<6}  "
+        f"{name:<22}  "
+        f"{event_type:<24}  "
+        f"{system:<38}  "
+        f"{detail}"
+    )
 
 
 class Company:
@@ -49,11 +81,18 @@ class Company:
         for role, details in hiring_plan.items():
             for i in range(1, details["count"] + 1):
                 employee_id = f'{details["prefix"]}-{i:03d}'
+                person = generate_person(role)
 
                 employee = Employee(
                     employee_id=employee_id,
                     role=role,
                     department=details["department"],
+                    first_name=person["first_name"],
+                    last_name=person["last_name"],
+                    office=person["office"],
+                    years_with_company=person["years_with_company"],
+                    assigned_project=person["assigned_project"],
+                    security_clearance=person["security_clearance"],
                 )
 
                 self.employees.append(employee)
@@ -70,9 +109,7 @@ class Company:
 
             all_events.extend(events)
 
-        all_events = sorted(all_events, key=lambda event: event["timestamp"])
-
-        return all_events
+        return sorted(all_events, key=lambda event: event["timestamp"])
 
 
 if __name__ == "__main__":
@@ -80,11 +117,16 @@ if __name__ == "__main__":
     company.hire_employees()
 
     workday_start = datetime(2026, 1, 5, 8, 15)
-
     events = company.simulate_workday(workday_start)
 
-    print(f"{company.name} generated {len(events)} events.")
-    print("First 20 events:")
+    print(f"\n{company.name}")
+    print(f"Employees hired: {len(company.employees)}")
+    print(f"Events generated: {len(events)}\n")
 
+    print("=== First 20 Events ===")
     for event in events[:20]:
-        print(event)
+        print(format_event(event))
+
+    print("\n=== Events 400–430 ===")
+    for event in events[400:430]:
+        print(format_event(event))

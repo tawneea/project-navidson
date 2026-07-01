@@ -4,4 +4,4 @@ scikit-learn
 matplotlib
 faker
 streamlit
-plotly
+plotlyFaker==40.23.0
