@@ -10,9 +10,6 @@
 └──────────────────────────────────────────────────────────────────────┘
 ```
 
-Project NAVIDSON is a Python-based behavioral simulation platform...
-> **Behavior is a function of context.**
-
 Project NAVIDSON is a Python-based behavioral simulation platform that explores how organizational context influences the interpretation of human behavior.
 
 Rather than beginning with an existing dataset, NAVIDSON begins by building the enterprise itself. The project simulates a fictional pharmaceutical company, generating realistic employee activity that can be used to study behavioral analytics, anomaly detection, insider threat detection, and explainable AI.
