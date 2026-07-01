@@ -1,13 +1,5 @@
 # project-navidson
-#┌──────────────────────────────────────────────────────────────────────┐
-#│                          PROJECT NAVIDSON                            │
-#│                                                                      │
-#│  Network Anomaly Visualization for Insider Detection in              │
-#│  Secure Organizational Networks                                      │
-#│                                                                      │
-#│            Behavior is a function of context.                        │
-#└──────────────────────────────────────────────────────────────────────┘
-## Network Anomaly Visualization for Insider Detection in Secure Organizational Networks
+
 
 > **Behavior is a function of context.**
 
