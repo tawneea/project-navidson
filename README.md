@@ -1,36 +1,12 @@
 # project-navidson
-
-PROJECT NAVIDSON
-
-Network Anomaly Visualization for
-Insider Detection in Secure Organizational Networks
-
-Behavior is a function of context.
-
-────────────────────────────────────
-
-Gladney Pharmaceuticals
-
-330 Employees
-7 Departments
-Synthetic Enterprise Simulation
-
-────────────────────────────────────
-
-Employee Archetypes
-        ↓
-Behavioral Simulation
-        ↓
-Synthetic Activity Logs
-        ↓
-Context-Aware Analysis
-        ↓
-Explainable Anomaly Detection
-
-────────────────────────────────────
-
-Inspired by House of Leaves
-Mark Z. Danielewski
+┌──────────────────────────────────────────────────────────────────────┐
+│                          PROJECT NAVIDSON                            │
+│                                                                      │
+│  Network Anomaly Visualization for Insider Detection in              │
+│  Secure Organizational Networks                                      │
+│                                                                      │
+│            Behavior is a function of context.                        │
+└──────────────────────────────────────────────────────────────────────┘
 ## Network Anomaly Visualization for Insider Detection in Secure Organizational Networks
 
 > **Behavior is a function of context.**
