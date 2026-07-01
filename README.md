@@ -1,7 +1,4 @@
-# project-navidson
-
-# PROJECT NAVIDSON
-
+# PROJECT NAVIDSON 
 ```
 ┌──────────────────────────────────────────────────────────────────────┐
 │                          PROJECT NAVIDSON                            │
