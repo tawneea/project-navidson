@@ -14,7 +14,7 @@ Project NAVIDSON uses this roadmap to provide realistic organizational context f
 
 ## Objective 1
 
-Advance DYLAR-X toward regulatory submission while maintaining scientific integrity and patient safety.
+Advance GP-217 through the HELIX clinical development initiative while maintaining scientific integrity and patient safety.
 
 ---
 
@@ -56,8 +56,8 @@ Major Initiatives
 - New employee onboarding
 - Research planning meetings
 - Laboratory equipment maintenance
-- Initial DYLAR-X data review
-
+- Initial GP-217 research review
+  
 Expected Behavioral Impact
 
 - Increased HR activity
@@ -80,6 +80,7 @@ Major Initiatives
 - Infrastructure modernization
 - Increased collaboration with Regulatory Affairs
 - External research partnerships
+- HELIX collaboration workshops
 
 Expected Behavioral Impact
 
@@ -98,7 +99,7 @@ Regulatory Focus
 
 Major Initiatives
 
-- FDA submission preparation
+- HELIX regulatory submission preparation
 - Internal compliance review
 - Security audit
 - Executive strategy meetings

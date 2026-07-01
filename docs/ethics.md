@@ -34,7 +34,7 @@ NAVIDSON is intended to support cybersecurity professionals—not replace them.
 
 The system generates observations, confidence scores, and recommendations that assist human analysts in prioritizing investigations.
 
-Final decisions should always remain the responsibility of qualified personnel.
+NAVIDSON is designed to support human judgment, not replace it. Final decisions should always remain the responsibility of qualified cybersecurity professionals.
 
 ---
 
@@ -59,7 +59,7 @@ Although Gladney Pharmaceuticals is fictional, NAVIDSON is designed around priva
 
 The project avoids collecting or simulating unnecessary personal information.
 
-Behavioral analysis focuses on work-related activity rather than personal characteristics.
+Behavioral analysis focuses on work-related activity rather than personal identity or protected characteristics.
 
 ---
 
@@ -92,6 +92,7 @@ NAVIDSON is intended for:
 - Software engineering
 - Cybersecurity experimentation
 - Explainable AI research
+- Synthetic data generation research
 
 The project is not intended for deployment in production environments without substantial validation, governance, and legal review.
 

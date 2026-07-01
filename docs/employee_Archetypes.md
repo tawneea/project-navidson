@@ -1,6 +1,6 @@
 # Employee Archetypes
 
-This document defines the behavioral profiles used to generate synthetic employee activity for Project NAVIDSON.
+This document defines the behavioral profiles used to generate synthetic employee activity for PROJECT NAVIDSON.
 
 Each archetype represents the expected behavior of employees within Gladney Pharmaceuticals and serves as the behavioral baseline for anomaly detection.
 
@@ -85,7 +85,7 @@ Higher activity before FDA submissions and scientific conferences.
 
 Behavior Notes:
 
-Research Scientists routinely access DYLAR-X research data, laboratory notebooks, and experimental datasets. High document access is considered normal for this role.
+Research Scientists routinely access GP-217 laboratory data, experimental results, and research documentation associated with HELIX. High document access is expected for this role and should not by itself be considered anomalous.
 
 Common Benign Anomalies:
 
@@ -236,10 +236,10 @@ Clinical Sciences Division
 Quality Assurance
 
 Expected Seasonal Variation:
-Significant increases immediately preceding FDA submission deadlines.
+Significant increases immediately preceding regulatory submission deadlines.
 Behavior Notes:
 
-Regulatory Affairs Specialists prepare FDA submissions, maintain compliance documentation, and coordinate with research teams throughout clinical development.
+Regulatory Affairs Specialists prepare regulatory submissions, maintain compliance documentation, and coordinate with research teams throughout clinical development.
 
 Common Benign Anomalies:
 
@@ -280,7 +280,7 @@ Primary Systems:
 - Enterprise Resource Planning (ERP)
 - Financial Planning Software
 - Payroll System
-- Budget Forecasting Platform
+- Financial Planning & Analysis (FP&A) Platform
 
 Typical Data Classification:
 - Confidential
@@ -435,7 +435,7 @@ Variable
 
 Primary Systems:
 - Active Directory
-- Microsoft Entra ID
+- Identity and Access Management (IAM)
 - VPN
 - Security Information and Event Management (SIEM)
 - Endpoint Detection and Response (EDR)
@@ -552,7 +552,7 @@ Increased activity during quarterly board meetings, budgeting, mergers and acqui
 
 Behavior Notes:
 
-Executive Leadership accesses strategic planning documents, financial forecasts, board materials, merger discussions, and executive-level research updates.
+Executive Leadership accesses strategic planning documents, financial forecasts, board materials, merger discussions, and strategic portfolio updates.
 
 Common Benign Anomalies:
 
@@ -561,3 +561,11 @@ Common Benign Anomalies:
 - Board meeting preparation
 - Temporary cross-department access
 - Strategic planning periods
+
+# Design Philosophy
+
+Behavioral archetypes are intended to describe expected patterns of work rather than rigid rules.
+
+Employees naturally deviate from their baseline behavior due to travel, collaboration, organizational events, evolving responsibilities, and operational demands.
+
+The purpose of an archetype is to provide context for behavioral interpretation—not to define normality as a fixed threshold.

@@ -1,8 +1,10 @@
 # Technology Environment
 
-This document defines the primary technology systems used by Gladney Pharmaceuticals. These systems serve as the digital environment where synthetic employee activity is generated for Project NAVIDSON.
+This document defines the primary enterprise systems used throughout Gladney Pharmaceuticals.
 
-NAVIDSON observes how employees interact with enterprise systems over time in order to detect behavioral changes, interpret those changes with context, and support human-centered cybersecurity analysis.
+These systems form the digital environment in which **PROJECT NAVIDSON** generates synthetic employee activity, enterprise telemetry, and behavioral observations.
+
+By modeling how employees interact with these systems over time, NAVIDSON can distinguish expected behavioral variation from activity that may warrant additional investigation.
 
 ---
 
@@ -40,10 +42,10 @@ Restricted
 
 ---
 
-## Microsoft Entra ID
+## Identity and Access Management (IAM)
 
 Purpose:
-Manages cloud identity, single sign-on, and multi-factor authentication.
+Provides centralized identity, authentication, authorization, and multi-factor authentication services.
 
 Typical Users:
 - All employees
@@ -155,7 +157,7 @@ Confidential to Restricted
 ## Research Share
 
 Purpose:
-Stores research documents, datasets, internal reports, and DYLAR-X project files.
+Stores research documents, datasets, laboratory reports, and documentation associated with GP-217 and HELIX.
 
 Typical Users:
 - Research Scientists
@@ -176,7 +178,7 @@ Confidential to Trade Secret
 ## Clinical Repository
 
 Purpose:
-Stores clinical trial data, patient-related research records, and study documentation.
+Stores clinical study data, research documentation, and regulated clinical records associated with HELIX.
 
 Typical Users:
 - Research Scientists
@@ -217,7 +219,7 @@ Confidential to Restricted
 
 ---
 
-## FDA Submission Portal
+## Regulatory Submission Portal
 
 Purpose:
 Used to prepare and submit official regulatory materials.
@@ -299,7 +301,7 @@ Restricted
 
 ---
 
-## Budget Forecasting Platform
+## Financial Planning & Analysis (FP&A) Platform
 
 Purpose:
 Supports financial planning, scenario modeling, and annual budgeting.
@@ -535,7 +537,8 @@ Very High
 ## Trade Secret
 
 Examples:
-- DYLAR-X formulation research
+- GP-217 laboratory research
+- HELIX development documentation
 - Proprietary experimental methods
 - Patent strategy
 - Unpublished scientific findings
@@ -547,16 +550,21 @@ Critical
 
 # NAVIDSON Relevance
 
-These systems define the environment in which employee behavior is observed.
+These enterprise systems define the environment in which employee behavior is generated and observed.
 
-NAVIDSON will use synthetic logs from these systems to model:
+Synthetic telemetry produced by these systems forms the foundation for behavioral feature engineering throughout PROJECT NAVIDSON.
 
-- Authentication behavior
+Examples include:
+
+- Authentication activity
 - File access behavior
 - Application usage
 - VPN activity
-- Device behavior
+- Device telemetry
 - Data classification access
+- Cross-department collaboration
 - Organizational context
 
-The goal is not to label employees as malicious, but to determine when activity differs meaningfully from a user's historical baseline and whether organizational context provides a reasonable explanation.
+Rather than treating individual events as isolated indicators, NAVIDSON evaluates behavior across multiple enterprise systems while incorporating historical baselines and organizational context.
+
+The objective is to support explainable behavioral analysis—not automated conclusions about employee intent.

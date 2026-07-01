@@ -2,14 +2,19 @@
 
 ## Overview
 
-Project NAVIDSON is a behavioral simulation and anomaly detection platform designed to model employee activity within a fictional pharmaceutical company.
+PROJECT NAVIDSON is a behavioral simulation platform that models employee activity within a fictional pharmaceutical company to support research in behavioral analytics, anomaly detection, and explainable cybersecurity.
+
+Rather than relying on existing enterprise datasets, NAVIDSON generates realistic organizational context and synthetic behavioral telemetry from the ground up. Employees, departments, technology, organizational events, and day-to-day workflows are modeled to create data that reflects how real organizations operate.
+
+The current simulation centers on Gladney Pharmaceuticals, whose lead investigational compound, GP-217, is progressing through Phase III clinical development under HELIX. The pharmaceutical setting provides a realistic environment for modeling collaboration, regulatory processes, sensitive research, and organizational behavior while remaining flexible enough to support future domains.
 
 The system is divided into four major layers:
 
-1. Simulation
-2. Data Generation
-3. Behavioral Analysis
-4. Analyst Interface
+1. Organizational Simulation
+2. Behavioral Simulation
+3. Feature Engineering
+4. Behavioral Analysis
+5. Human Review
 
 Each layer is independent, allowing future components to be expanded without redesigning the entire project.
 
@@ -54,7 +59,7 @@ Components include:
 - Employee Archetypes
 - Technology Environment
 - Organizational Events
-- Company Calendar
+- Organizational Calendar
 
 Purpose:
 
@@ -75,7 +80,7 @@ Examples include:
 - Device usage
 - Application usage
 - Travel
-- Research activity
+- Research and development activity
 
 Behavior is generated using each employee's historical baseline together with current organizational events.
 
@@ -122,9 +127,9 @@ The final layer supports cybersecurity analysts.
 Possible recommendations include:
 
 - No Action
-- Monitor
-- Training Reminder
-- Manager Review
+- Continue Monitoring
+- Behavioral Coaching Recommended
+- Manager Consultation
 - Security Review
 - Immediate Investigation
 
@@ -192,23 +197,22 @@ Future additions may include:
 NAVIDSON/
 
 docs/
-│── README.md
-│── Gladney_Pharmaceuticals.md
-│── DYLAR-X.md
-│── Employee_Archetypes.md
-│── Technology_Environment.md
-│── Organizational_Events.md
+│── architecture.md
 │── Behavioral_Features.md
-│── Architecture.md
+│── data_dictionary.md
+│── Employee_Archetypes.md
+│── ethics.md
+│── Gladney_Company_Profile.md
+│── meeting_notes.md
+│── Organizational_Events.md
+│── roadmap.md
+│── Technology_Environment.md
 
 src/
-│── employee.py
-│── company.py
-│── simulator.py
-│── events.py
-│── feature_engineering.py
-│── anomaly_detection.py
-│── confidence.py
+└── simulation/
+    ├── archetypes.py
+    ├── company.py
+    └── generate_employee_logs.py
 
 data/
 │── synthetic/

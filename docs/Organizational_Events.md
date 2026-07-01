@@ -2,9 +2,9 @@
 
 This document defines recurring and one-time organizational events that influence employee behavior throughout Gladney Pharmaceuticals.
 
-Project NAVIDSON uses these events to introduce realistic behavioral variation into the synthetic dataset. Rather than generating random anomalies, employee behavior changes in response to meaningful organizational activity.
+PROJECT NAVIDSON uses these events to introduce realistic behavioral variation into the synthetic enterprise environment. Rather than generating random anomalies, employee behavior changes in response to meaningful organizational activity.
 
-Organizational events provide context for behavioral analysis and help distinguish expected operational changes from potentially suspicious activity.
+These events provide essential organizational context, allowing behavioral observations to be interpreted within the operational environment in which they occur.
 
 ---
 
@@ -74,7 +74,7 @@ Expected Behavioral Changes:
 
 # Research & Development
 
-## DYLAR-X Research Milestone
+## HELIX Research Milestone
 
 Frequency:
 Quarterly
@@ -86,9 +86,9 @@ Clinical Sciences
 Expected Behavioral Changes:
 
 - Increased ELN usage
-- Larger research file access
+- Increased GP-217 laboratory documentation
 - Longer laboratory sessions
-- Increased collaboration
+- Increased collaboration with Regulatory Affairs
 
 ---
 
@@ -111,7 +111,7 @@ Expected Behavioral Changes:
 
 # Regulatory Affairs
 
-## FDA Submission Window
+## Regulatory Submission Window
 
 Frequency:
 As Needed
@@ -198,6 +198,7 @@ Expected Behavioral Changes:
 - Elevated administrative activity
 - Increased SIEM usage
 - Cross-department communication
+- Elevated executive communications
 
 ---
 
@@ -251,7 +252,7 @@ HR
 Expected Behavioral Changes:
 
 - Increased HR activity
-- Higher executive collaboration
+- Increased manager-HR collaboration
 - Increased document generation
 
 ---
@@ -288,6 +289,7 @@ Expected Behavioral Changes:
 - Executive collaboration
 - Forecast modeling
 - Financial scenario analysis
+- Increased HELIX budget planning
 
 ---
 
@@ -306,7 +308,7 @@ Expected Behavioral Changes:
 - Increased travel
 - Board portal access
 - Financial report review
-- Strategic document access
+- Strategic portfolio review
 
 ---
 
@@ -355,6 +357,23 @@ Expected Behavioral Changes:
 
 ---
 
+Organizational Event
+        │
+        ▼
+Workflow Changes
+        │
+        ▼
+Employee Behavior
+        │
+        ▼
+Enterprise Telemetry
+        │
+        ▼
+Behavioral Features
+        │
+        ▼
+Behavioral Interpretation
+
 # NAVIDSON Notes
 
 Organizational events should decrease anomaly confidence when employee behavior aligns with expected organizational changes.
@@ -365,15 +384,19 @@ Research Scientist
 
 ↓
 
-Late-night document access
+Late-night GP-217 documentation
 
 ↓
 
-FDA Submission Window Active
+HELIX Regulatory Submission Window Active
 
 ↓
 
-Reduced anomaly confidence
+Behavior explained by organizational context
+
+↓
+
+Investigation confidence reduced
 
 Rather than asking:
 

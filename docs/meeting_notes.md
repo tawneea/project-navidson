@@ -4,7 +4,7 @@
 
 This document contains representative examples of recurring internal meetings held within Gladney Pharmaceuticals.
 
-These meetings provide organizational context for Project NAVIDSON by documenting operational decisions, upcoming initiatives, and everyday workplace observations that naturally influence employee behavior.
+These meetings provide organizational context for **PROJECT NAVIDSON** by documenting operational decisions, upcoming initiatives, and everyday workplace observations that naturally influence employee behavior.
 
 The notes are fictional but modeled after realistic communication within a mid-sized pharmaceutical company.
 
@@ -23,14 +23,14 @@ Attendees
 
 Agenda
 
-- Review DYLAR-X experimental progress.
+- Review GP-217 experimental progress and HELIX milestones.
 - Discuss laboratory scheduling.
 - Coordinate with Regulatory Affairs.
 - Review upcoming conference travel.
 
 Key Decisions
 
-- Experiment Series 47 approved.
+- GP-217 Experiment Series 47 approved.
 - Two researchers attending the International Neuroscience Conference.
 - Additional laboratory time approved this week.
 
@@ -63,7 +63,7 @@ Attendees
 
 Agenda
 
-- FDA submission timeline.
+- Regulatory submission timeline.
 - Documentation completeness review.
 - Outstanding compliance items.
 
@@ -219,19 +219,19 @@ Attendees
 
 Agenda
 
-- DYLAR-X progress.
+- GP-217 clinical progress.
+- HELIX program status.
 - Regulatory readiness.
 - Cybersecurity posture.
 - Strategic hiring.
-- Annual objectives.
 
 Key Decisions
 
 - Expand Boston Clinical Sciences Division.
 - Increase cybersecurity staffing.
 - Prioritize infrastructure modernization.
-- Begin planning for the next clinical phase.
-
+- Begin planning for HELIX Phase III completion.
+  
 Expected Behavioral Impact
 
 - Executive travel.
