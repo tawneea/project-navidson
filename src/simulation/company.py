@@ -3,6 +3,9 @@ from datetime import datetime
 from generate_employee_logs import Employee
 from personnel import generate_person
 
+from event_exporter import save_employees, save_events
+
+from datetime import datetime, timedelta
 
 def format_event(event):
     timestamp = event["timestamp"].strftime("%H:%M")
@@ -116,17 +119,27 @@ if __name__ == "__main__":
     company = Company("Gladney Pharmaceuticals")
     company.hire_employees()
 
-    workday_start = datetime(2026, 1, 5, 8, 15)
-    events = company.simulate_workday(workday_start)
+    save_employees(company.employees)
+
+    start_date = datetime(2026, 1, 5, 8, 15)
+    number_of_days = 5
+
+    total_events = 0
+
+    for day in range(number_of_days):
+        workday_start = start_date + timedelta(days=day)
+
+        # Skip weekends for now
+        if workday_start.weekday() >= 5:
+            continue
+
+        events = company.simulate_workday(workday_start)
+        save_events(events)
+
+        total_events += len(events)
+
+        print(f"Saved {len(events)} events for {workday_start.date()}")
 
     print(f"\n{company.name}")
     print(f"Employees hired: {len(company.employees)}")
-    print(f"Events generated: {len(events)}\n")
-
-    print("=== First 20 Events ===")
-    for event in events[:20]:
-        print(format_event(event))
-
-    print("\n=== Events 400–430 ===")
-    for event in events[400:430]:
-        print(format_event(event))
+    print(f"Total events generated: {total_events}")
