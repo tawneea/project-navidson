@@ -55,12 +55,16 @@ class Employee:
 
     def work(self, start_time):
         profile = ROLE_PROFILES[self.role]
-
         possible_events = profile["possible_events"]
+
+        event_count = random.randint(
+            max(1, profile["work_events"] - 1),
+            profile["work_events"] + 1
+        )
 
         work_events = []
 
-        for _ in range(profile["work_events"]):
+        for _ in range(event_count):
             event_time = start_time + timedelta(
                 hours=random.randint(1, 7),
                 minutes=random.randint(0, 59)
@@ -77,7 +81,7 @@ class Employee:
                 "office": self.office,
                 "assigned_project": self.assigned_project,
                 "security_clearance": self.security_clearance,
-})
+            })
 
             work_events.append(event)
 
