@@ -5,7 +5,12 @@ ORGANIZATIONAL_EVENTS = {
         {
             "name": "Research Weekly Sync",
             "departments": ["Research"],
-            "effect": "collaboration"
+            "effect": "collaboration",
+            "preferred_events": [
+                "teams_message",
+                "file_access",
+                "file_access"
+            ]
         }
     ],
 
@@ -13,7 +18,13 @@ ORGANIZATIONAL_EVENTS = {
         {
             "name": "IT Infrastructure Maintenance",
             "departments": ["Information Technology"],
-            "effect": "maintenance"
+            "effect": "maintenance",
+            "preferred_events": [
+                "firewall_update",
+                "backup_check",
+                "admin_action",
+                "endpoint_review"
+            ]
         }
     ],
 
@@ -21,7 +32,12 @@ ORGANIZATIONAL_EVENTS = {
         {
             "name": "Finance Month-End Preparation",
             "departments": ["Finance"],
-            "effect": "financial_close"
+            "effect": "financial_close",
+            "preferred_events": [
+                "payroll_review",
+                "file_access",
+                "teams_message"
+            ]
         }
     ],
 
@@ -32,14 +48,16 @@ ORGANIZATIONAL_EVENTS = {
                 "Research",
                 "Regulatory Affairs"
             ],
-            "effect": "regulatory_deadline"
+            "effect": "regulatory_deadline",
+            "preferred_events": [
+                "document_review",
+                "file_access",
+                "teams_message"
+            ]
         }
     ]
 }
 
 
 def get_events(current_date):
-    """
-    Return all organizational events scheduled for a given date.
-    """
     return ORGANIZATIONAL_EVENTS.get(current_date.date(), [])
