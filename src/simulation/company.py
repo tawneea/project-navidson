@@ -1,11 +1,9 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 
 from generate_employee_logs import Employee
 from personnel import generate_person
-
 from event_exporter import save_employees, save_events
-
-from datetime import datetime, timedelta
+from organizational_calendar import get_events
 
 def format_event(event):
     timestamp = event["timestamp"].strftime("%H:%M")
@@ -103,16 +101,25 @@ class Company:
         return self.employees
 
     def simulate_workday(self, workday_start):
+        todays_events = get_events(workday_start)
+
+        if todays_events:
+            print(f"\nOrganizational events for {workday_start.date()}:")
+            for event in todays_events:
+                print(f"- {event['name']}")
+
         all_events = []
 
         for employee in self.employees:
             events = [employee.login(workday_start)]
-            events.extend(employee.work(workday_start))
+            events.extend(employee.work(workday_start, todays_events))
             events.append(employee.logout(workday_start))
 
             all_events.extend(events)
 
-        return sorted(all_events, key=lambda event: event["timestamp"])
+        all_events = sorted(all_events, key=lambda event: event["timestamp"])
+
+        return all_events
 
 
 if __name__ == "__main__":

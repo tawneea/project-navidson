@@ -53,7 +53,7 @@ class Employee:
             "security_clearance": self.security_clearance,
          }
 
-    def work(self, start_time):
+    def work(self, start_time, todays_events=None):
         profile = ROLE_PROFILES[self.role]
         possible_events = profile["possible_events"]
 
@@ -61,6 +61,11 @@ class Employee:
             max(1, profile["work_events"] - 1),
             profile["work_events"] + 1
         )
+        todays_events = todays_events or []
+
+        for org_event in todays_events:
+            if self.department in org_event["departments"]:
+                event_count += 1
 
         work_events = []
 
