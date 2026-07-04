@@ -184,13 +184,80 @@ ROLE_PROFILES = {
         "login_variance": 60,
         "work_events": 6,
         "possible_events": [
-            {"event_type": "admin_action", "system": "Active Directory", "action": "Group Membership Review"},
-            {"event_type": "security_alert_review", "system": "SIEM", "alert": "Unusual VPN Location"},
-            {"event_type": "endpoint_review", "system": "EDR", "device": "Laptop-042"},
-            {"event_type": "firewall_update", "system": "Firewall Management", "change": "Rule Review"},
-            {"event_type": "backup_check", "system": "Backup Infrastructure", "status": "Validation Complete"},
-        ],
+            
+            {
+                "event_type": "identity_management",
+                "action": "Review Group Membership",
+                "system": "Microsoft Active Directory",
+                "record": "Research Scientists Security Group",
+            },
+
+            {
+                "event_type": "identity_management",
+                "action": "Reset Password",
+                "system": "Microsoft Active Directory",
+                "record": "Employee Account",
+            },
+
+            {
+                "event_type": "security_alert_review",
+                "action": "Investigate",
+                "system": "Microsoft Sentinel",
+                "alert": "Unusual VPN Location",
+                "status": "Under Review",
+            },
+
+            {
+                "event_type": "endpoint_review",
+                "action": "Review Endpoint Health",
+                "system": "Microsoft Defender for Endpoint",
+                "device": "Research-Laptop-042",
+                "status": "Healthy",
+            },
+
+            {
+                "event_type": "firewall_update",
+                "action": "Approve Rule Change",
+                "system": "Palo Alto Panorama",
+                "change": "Research VLAN Rule UPdate",
+                "status": "Approved",
+            },
+
+            {
+                "event_type": "vulnerability_review",
+                "action": "Review Findings", 
+                "system": "Qualys VMDR",
+                "record": "Weekly Vulnerability Scan",
+                "status": "Open",
+            },
+
+            {
+                "event_type": "patch_management",
+                "action": "Approve Patch Deployment",
+                "system": "Microsoft Intune", 
+                "record": "Windows Security Updates",
+                "status": "Scheduled", 
+            },
+
+            {
+                "event_type": "vpn_review",
+                "action": "Review Remote Login",
+                "system": "VPN Gateway",
+                "device": "Remote-Laptop-017",
+                "status": "Verified",
+            },
+
+            {
+                "event_type": "teams_message",
+                "action": "Send",
+                "system": "Microsoft Teams",
+                "recipient_department": "Research",
+            },
+
+        ]
     },
+                
+                 
 
     "Executive Leadership": {
         "login_hour": 8,
