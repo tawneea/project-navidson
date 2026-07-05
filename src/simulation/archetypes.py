@@ -158,10 +158,53 @@ ROLE_PROFILES = {
         "login_variance": 10,
         "work_events": 3,
         "possible_events": [
-            {"event_type": "file_access", "system": "ERP", "file": "HELIX_Budget_Q2.xlsx"},
-            {"event_type": "file_access", "system": "FP&A Platform", "file": "HELIX_Cost_Forecast.xlsx"},
-            {"event_type": "payroll_review", "system": "Payroll System", "file": "Payroll_Reconciliation.csv"},
-            {"event_type": "teams_message", "system": "Microsoft Teams", "recipient_department": "Executive Leadership"},
+            {
+                "event_type": "budget_review",
+                "action": "Review",
+                "system": "ERP",
+                "document": "HELIX Budget Review",
+                "file": "HELIX_Budget_Q2.xlsx",
+            },
+            {
+                "event_type": "forecast_update",
+                "action":"Update",
+                "system": "FP&A Platform",
+                "document": "HELIX Cost Forecast",
+                "file": "HELIX_Cost_Forecast.xlsx",
+            },
+            {
+                "event_type": "payroll_review",
+                "action": "Review", 
+                "system": "Payroll System",
+                "document": "Payroll Reconciliation",
+                "file": "Payroll_Reconciliation.csv",
+            },
+            {
+                "event_type": "procurement_review",
+                "action": "Approve",
+                "system": "ERP",
+                "record": "Purchase Order PO-1048",
+                "status": "Approved",
+            },
+            {
+                "event_type": "financial_report_access",
+                "action": "Open",
+                "system": "Financial Reporting",
+                "document": "Quarterly Forecast",
+                "file": "Quarterly_Forecast_Q2.pdf",
+            },
+            {
+                "event_type": "teams_message", 
+                "action": "Send", 
+                "system": "Microsoft Teams",
+                "recipient_department": "Executive Leadership",
+            },
+            {
+                "event_type": "teams_message",
+                "action": "Send",
+                "system": "Microsoft Teams",
+                "recipient_department": "Human Resources",
+            },
         ],
     },
 
@@ -171,10 +214,56 @@ ROLE_PROFILES = {
         "login_variance": 15,
         "work_events": 3,
         "possible_events": [
-            {"event_type": "file_access", "system": "HRIS", "file": "Employee_Record_Update.pdf"},
-            {"event_type": "file_access", "system": "Recruiting Platform", "file": "Research_Scientist_Candidates.xlsx"},
-            {"event_type": "benefits_update", "system": "Benefits Administration", "file": "Open_Enrollment_Form.pdf"},
-            {"event_type": "teams_message", "system": "Microsoft Teams", "recipient_department": "Finance"},
+            {
+                "event_type": "employee_record_update",
+                "action": "Update",
+                "system": "HRIS",
+                "document": "Employee Record Update",
+                "file": "Employee_Record_Update.pdf",
+                "record": "Employee Profile HR-2041",
+            },
+            {
+                "event_type": "candidate_review",
+                "action": "Review",
+                "system": "Recruiting Platform",
+                "document": "Research Scientist Candidate List",
+                "file": "Research_Scientist_Candidates.xlsx",
+            },
+            {
+                "event_type": "benefits_update",
+                "action": "Update",
+                "system": "Benefits Administration",
+                "document": "Open Enrollment Form",
+                "file": "Open_Enrolment_Form.pdf",
+                "record": "Benefits Case BE-1182",
+            },
+            {
+                "event_type": "onboarding_task",
+                "action": "Create",
+                "system": "HRIS",
+                "document": "New Hire Onboarding Checklist",
+                "status": "In Progress",
+            },
+            {
+                "event_type": "training_review",
+                "action": "Review",
+                "system": "Learning Management System", 
+                "document": "Cybersecurity Awareness Completion Report",
+                "file": "Security_Awareness_Completion.csv",
+            },
+            {  
+                "event_type": "teams_message",
+                "action": "Send",
+                "system": "Microsoft Teams",
+                "recipient_department": "Finance",
+            },
+            {
+                "event_type": "teams_message", 
+                "action": "Send", 
+                "system": "Microsoft Teams",
+                "recipient_department": "Information Technology",
+            },      
+                
         ],
     },
 
@@ -265,10 +354,69 @@ ROLE_PROFILES = {
         "login_variance": 90,
         "work_events": 2,
         "possible_events": [
-            {"event_type": "file_access", "system": "Board Portal", "file": "HELIX_Board_Update.pdf"},
-            {"event_type": "file_access", "system": "Executive Dashboard", "file": "Portfolio_Risk_Report.pdf"},
-            {"event_type": "file_access", "system": "Financial Reporting", "file": "Quarterly_Forecast.pdf"},
-            {"event_type": "teams_message", "system": "Microsoft Teams", "recipient_department": "All Departments"},
-        ],
-    },
+            
+            {
+                "event_type": "executive_dashboard",
+                "action": "Review",
+                "system": "Executive Dashboard",
+                "document": "Enterprise Performance Dashboard",
+                "file": "Enterprise_KPI_Dashboard.pdf",
+            },
+
+            {
+                "event_type": "board_report",
+                "action": "Review",
+                "system": "Board Portal",
+                "document": "Board Meeting Briefing",
+                "file": "Board_Meeting_Briefing_Q1.pdf",
+            },
+
+            {
+                "event_type": "financial_report_access",
+                "action": "Review",
+                "system": "Financial Reporting",
+                "document": "Quarterly Financial Forecast",
+                "file": "Quarterly_Forecast_Q1.pdf",
+            },
+
+            {
+                "event_type": "risk_review",
+                "action": "Review",
+                "system": "Enterprise Risk Management",
+                "document": "Enterprise Risk Assessment",
+                "file": "Enterprise_Risk_Assessment.pdf",
+            },
+
+            {
+                "event_type": "strategy_review",
+                "action": "Review",
+                "system": "Strategy Portal",
+                "document": "HELIX Strategic Roadmap",
+                "file": "HELIX_Strategic_Roadmap.pdf",
+            },
+
+            {
+                "event_type": "approval",
+                "action": "Approve",
+                "system": "Executive Approval Portal",
+                "record": "Capital Expenditure Request",
+                "status": "Approved",
+            },
+                
+            {
+                "event_type": "teams_message",
+                "action": "Send",
+                "system": "Microsoft Teams",
+                "recipient_department": "All Departments",
+            },
+
+            {
+                "event_type": "executive_meeting",
+                "action": "Attend",
+                "system": "Microsoft Teams",
+                "document": "Executive Leadership Agenda",
+        },
+
+    ],
+},
 }
